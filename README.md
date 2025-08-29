@@ -9,7 +9,7 @@ El proyecto está organizado con cada clase en su propio archivo (`.py`) y sus p
 ## Instrucciones de Despliegue e Instalación
 1.  **Clonar el repositorio:**
     ```bash
-    git clone https://github.com/Kevin-Florez/construsys-pruebas-unitarias.git
+    git clone https://github.com/Follacamiones123/Pruebas-unitarias.git
     cd construsys-pruebas-unitarias
     ```
 2.  **(Opcional) Crear un entorno virtual:**
@@ -35,7 +35,7 @@ python test_detalle_pedido.py
 ```
 
 
-## 🚀 Automatización con GitHub Actions
+##   Automatización con GitHub Actions
 
 Este repositorio incluye un flujo de trabajo de Integración Continua (CI) utilizando GitHub Actions.
 
