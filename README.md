@@ -1,30 +1,46 @@
 # Proyecto Backend - Pruebas Unitarias (SENA - ADSO)
 
 ## Descripción del Proyecto
-Este repositorio contiene el código backend para un sistema simple y demuestra la implementación de **pruebas unitarias** en Python con `unittest` para 5 clases del modelo de negocio.
 
-## Estructura de Archivos
-El proyecto está organizado con cada clase en su propio archivo (`.py`) y sus pruebas en un archivo `test_` correspondiente.
+Este repositorio contiene el código backend para un sistema de gestión de un modelo de negocio simple (usuarios, productos, pedidos). El objetivo principal de este proyecto es demostrar la implementación de **pruebas unitarias** en Python utilizando el módulo `unittest` para garantizar la calidad y el correcto funcionamiento del código.
+
+## Tecnologías Utilizadas
+
+* **Lenguaje:** Python 3
+* **Framework de Pruebas:** `unittest` (módulo estándar de Python)
+* **Base de Datos (Ejemplo):** SQLite (compatible con el script SQL proporcionado)
 
 ## Instrucciones de Despliegue e Instalación
+
+Para configurar el proyecto en una máquina local, sigue estos pasos:
+
 1.  **Clonar el repositorio:**
     ```bash
-    git clone https://github.com/Follacamiones123/Pruebas-unitarias.git
-    cd Pruebas unitarias
+    git clone <URL_DE_TU_REPOSITORIO_EN_GITHUB>
+    cd <NOMBRE_DEL_PROYECTO>
     ```
-2.  **(Opcional) Crear un entorno virtual:**
+
+2.  **(Opcional) Crear un entorno virtual:** Se recomienda para aislar las dependencias del proyecto.
     ```bash
     python -m venv venv
-    source venv/bin/activate
+    source venv/bin/activate  # En Windows: venv\Scripts\activate
     ```
-3.  **Importar la base de datos (ejemplo con SQLite):**
+
+3.  **Importar la base de datos:** Si estás usando SQLite, puedes crear e importar la base de datos con el siguiente comando:
     ```bash
     sqlite3 mi_base_de_datos.db < database.sql
     ```
+    Esto creará un archivo `mi_base_de_datos.db` con la estructura y los datos de ejemplo.
 
-## Ejecución de las Pruebas Unitarias
+## Instrucciones de Ejecución del Proyecto
 
-Puedes verificar el correcto funcionamiento del código ejecutando cada archivo de prueba de forma individual:
+Actualmente, el proyecto se centra en las clases del modelo y sus pruebas. No hay un servidor o aplicación principal para ejecutar. El código se puede explorar y probar a través de las pruebas unitarias.
+
+## Instrucciones de Ejecución de las Pruebas Unitarias
+
+Para verificar que todo el código funciona correctamente, puedes ejecutar las pruebas unitarias. Asegúrate de estar en la carpeta raíz del proyecto.
+
+Puedes ejecutar cada archivo de prueba de forma individual con los siguientes comandos:
 
 ```bash
 python test_usuario.py
@@ -34,17 +50,3 @@ python test_pedido.py
 python test_detalle_pedido.py
 ```
 
-
-##   Automatización con GitHub Actions
-
-Este repositorio incluye un flujo de trabajo de Integración Continua (CI) utilizando GitHub Actions.
-
-### Configuración y Despliegue Automático
-
-El flujo de trabajo se encuentra definido en el archivo `.github/workflows/python-tests.yml` y realiza las siguientes acciones de manera automática:
-
-1.  **Disparadores (Triggers)**: La automatización se activa automáticamente cada vez que se realiza un `push` o un `pull request` a la rama `main`.
-2.  **Entorno de Ejecución**: Se configura un entorno virtual con Ubuntu y Python 3.10.
-3.  **Ejecución de Pruebas**: Se ejecutan todas las pruebas unitarias del proyecto de forma automática utilizando el comando `python -m unittest discover`.
-
-Esto asegura que cualquier cambio nuevo subido al repositorio sea verificado y no rompa la funcionalidad existente, garantizando la calidad y estabilidad del código. Los resultados de cada ejecución se pueden ver en la pestaña **"Actions"** del repositorio.

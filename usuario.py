@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # usuario.py
 class Usuario:
     def __init__(self, first_name, last_name, email, password):
@@ -16,3 +17,12 @@ class Usuario:
 
     def check_password(self, password):
         return self.__password == password
+=======
+class Usuario:
+    def __init__(self, nombre, apellido):
+        self.nombre = nombre
+        self.apellido = apellido
+    
+    def nombre_completo(self):
+        return f"{self.nombre} {self.apellido}"
+>>>>>>> 657b5456f15faee7f40f73cfa361a8b525282106

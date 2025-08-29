@@ -5,4 +5,8 @@ class DetallePedido:
             raise ValueError("La cantidad debe ser positiva")
         self.producto = producto
         self.cantidad = cantidad
-        self.subtotal = producto.precio * cantidad
+
+
+    def __str__(self):
+        return f"{self.cantidad} x {self.producto.nombre}"
+>>>>>>> 657b5456f15faee7f40f73cfa361a8b525282106

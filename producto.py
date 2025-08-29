@@ -8,7 +8,11 @@ class Producto:
         self.categoria = categoria
         self.stock = stock
 
+    def obtener_info(self):
+        return f"{self.nombre} (${self.precio:.2f}) - Stock: {self.stock}"
+
     def actualizar_stock(self, cantidad):
         if self.stock + cantidad < 0:
             raise ValueError("El stock no puede ser negativo")
+        self.stock += cantidad
         self.stock += cantidad
