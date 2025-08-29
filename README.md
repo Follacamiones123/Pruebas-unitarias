@@ -10,7 +10,7 @@ El proyecto está organizado con cada clase en su propio archivo (`.py`) y sus p
 1.  **Clonar el repositorio:**
     ```bash
     git clone https://github.com/Follacamiones123/Pruebas-unitarias.git
-    cd construsys-pruebas-unitarias
+    cd Pruebas unitarias
     ```
 2.  **(Opcional) Crear un entorno virtual:**
     ```bash
